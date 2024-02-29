@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pay for Parking"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:background="#FFFF8D"
+            />
+        <EditText
+            android:id="@+id/etNumberOfHours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter number of hours to park"
+            android:inputType="numberDecimal"
+            />
+        <EditText
+            android:id="@+id/etLicensePlate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter license plate"
+            android:inputType="text"
+            />
+
+        <RadioGroup
+            android:id="@+id/radioLots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radioLotA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lot A ($2.50/hr)"/>
+
+            <RadioButton
+                android:id="@+id/radioLotB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lot B ($3.00/hr)"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btnPayNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00C4FF"
+            android:text="Pay Now"
+
+            />
+
+        <Button
+            android:id="@+id/btnHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#DF0751"
+            android:text="History"/>
+        <TextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Error: All fields must be filled in."
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:background="#CC0202"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:visibility="gone"
+            android:text="Results"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
